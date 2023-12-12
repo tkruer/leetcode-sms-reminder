@@ -7,11 +7,18 @@ services:
     repo: https://github.com/tkruer/leetcode-sms-reminder.git
     
 envVarGroups:
-  - name: conc-settings
+  - name: CHANGE_ME_SMS_ENV
     envVars:
-      - key: CONCURRENCY
-        value: 2
-      - key: SECRET
-        generateValue: true
-      - key: USER_PROVIDED_SECRET
-        sync: false
+      - key: YOUR_PHONE_NUMBER
+        value: 1234567890
+        sync: true
+      - key: TWILLIO_ACCOUNT_SID
+        value: YOUR_TWILLIO_ACCOUNT_SID
+        sync: true
+      - key: TWILLIO_AUTH_TOKEN
+        value: YOUR_TWILLIO_AUTH_TOKEN
+        sync: true
+      - key: TWILLIO_PHONE_NUMBER
+        value: YOUR_TWILLIO_PHONE_NUMBER
+        sync: true
+ 
