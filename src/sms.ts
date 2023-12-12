@@ -16,8 +16,8 @@ export async function sendSMS({ message }: { message: string }): Promise<boolean
             to: `${phone_number}`,
             body: `${message}`,
           })          
-        return false
-      } else {        
         return true
+      } else {        
+        return false
     }
 }
