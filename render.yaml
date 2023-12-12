@@ -7,7 +7,5 @@ services:
     envVars:
       - key: ENV_VAR_1
         value: "default-value-1"
-        sync: false
       - key: ENV_VAR_2
         value: "default-value-2"
-        sync: false
