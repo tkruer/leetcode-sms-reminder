@@ -6,4 +6,5 @@ services:
     plan: starter
     autoDeploy: false
     key: SOME_SECRET
+    value: SOME_VALUE
     sync: false
