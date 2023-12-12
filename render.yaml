@@ -4,8 +4,14 @@ services:
     runtime: docker
     schedule: "0 13,1 * * *" # Cron schedule for 5 AM and 5 PM PST (converted to UTC)
     autoDeploy: false
+    repo: https://github.com/tkruer/leetcode-sms-reminder.git
+    
+envVarGroups:
+  - name: conc-settings
     envVars:
-      - key: ENV_VAR_1
-        value: "default-value-1"
-      - key: ENV_VAR_2
-        value: "default-value-2"
+      - key: CONCURRENCY
+        value: 2
+      - key: SECRET
+        generateValue: true
+      - key: USER_PROVIDED_SECRET
+        sync: false
