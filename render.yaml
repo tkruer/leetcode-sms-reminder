@@ -3,8 +3,11 @@ services:
     name: leetcode-sms
     runtime: docker
     schedule: "0 13,1 * * *" # Cron schedule for 5 AM and 5 PM PST (converted to UTC)
-    plan: starter
     autoDeploy: false
-    key: SOME_SECRET
-    value: SOME_VALUE
-    sync: false
+    envVars:
+      - key: ENV_VAR_1
+        value: "default-value-1"
+        sync: false
+      - key: ENV_VAR_2
+        value: "default-value-2"
+        sync: false
