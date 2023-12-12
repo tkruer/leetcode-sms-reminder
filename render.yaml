@@ -1,7 +1,9 @@
 services:
   - type: cron
-    name: your-cron-job-name
-    dockerfilePath: ./Dockerfile
+    name: leetcode-sms
+    runtime: docker
     schedule: "0 13,1 * * *" # Cron schedule for 5 AM and 5 PM PST (converted to UTC)
     plan: starter
     autoDeploy: false
+    key: SOME_SECRET
+    sync: false
